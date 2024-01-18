@@ -6,7 +6,11 @@ const port = process.env.PORT || 5000;
 
 
 // middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://vercel.com/triistiak-gmailcom/shop-with-pagination-client'
+  ]
+}));
 app.use(express.json());
 
 
